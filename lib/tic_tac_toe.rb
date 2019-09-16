@@ -40,8 +40,9 @@ def turn_count(board)
   counter = 0
   board.reject do |position|
     position == " " || position == nil
+    counter = board.length
   end
-  counter = board.length
+  counter
 end
 
 def current_player(board)
