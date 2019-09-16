@@ -35,6 +35,13 @@ def turn(board)
   display_board(board)
 end
 
+turn_count(board)
+  counter = 0
+  board.reject do |position|
+    position == " " || position == nil
+  end
+  counter = board.length
+end
 
 
 WIN_COMBINATIONS = [
