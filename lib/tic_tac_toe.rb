@@ -40,7 +40,8 @@ def turn_count(board)
   counter = 0
   board.all? do |position|
     if position != " " || position != nil
-    counter += 1
+      counter += 1
+    end
   end
   counter
 end
