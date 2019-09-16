@@ -30,6 +30,7 @@ def turn(board)
     puts "Invalid move."
     turn(board)
   else
+    value = current_player
     move(board, index, value)
   end
   display_board(board)
