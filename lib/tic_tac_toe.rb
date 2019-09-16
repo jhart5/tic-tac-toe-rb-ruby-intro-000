@@ -101,3 +101,9 @@ def winner(board)
     nil
   end
 end
+
+def play(board)
+  until over?(board)
+    turn(board)
+  end
+end
