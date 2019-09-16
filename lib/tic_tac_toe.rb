@@ -22,6 +22,20 @@ def valid_move?(board, index)
   !position_taken?(board, index) && index.between?(0,8)
 end
 
+def turn(board)
+  puts "Where would you like to go (0-9)?"
+  input = gets.strip
+  index = input_to_index(input)
+  if !valid_move?(board, index)
+    puts "Invalid move."
+    turn(board)
+  else
+    move(board, index, value)
+  end
+  display_board(board)
+end
+  
+
 
 WIN_COMBINATIONS = [
   [0,1,2],
