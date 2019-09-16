@@ -35,7 +35,7 @@ def turn(board)
   display_board(board)
 end
 
-turn_count(board)
+def turn_count(board)
   counter = 0
   board.reject do |position|
     position == " " || position == nil
