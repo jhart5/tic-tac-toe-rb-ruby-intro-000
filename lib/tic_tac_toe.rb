@@ -39,8 +39,8 @@ end
 def turn_count(board)
   counter = 0
   board.reject do |position|
-    position == " " || position == nil
-    counter = board.length
+    if position != " " || position != nil
+    counter += 1
   end
   counter
 end
